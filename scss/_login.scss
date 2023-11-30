@@ -1,0 +1,50 @@
+/* login頁 */
+.login{
+    background-color: $color-gr7;
+    padding: 50px 0 5px 0;
+    color: $color-br;
+    h2{
+        margin: 0 auto; 
+    }
+    span{
+        display: block;
+        text-align: center;
+        margin: 5px 0 35px;
+        font-weight: $font-b;
+        font-size: $font-m; 
+    }
+    .login-form{
+        border-top: 3px solid $color-og;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 15px;
+        background: $color-gr7;
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+        .login-email{
+            margin-bottom: 15px; 
+        }
+        h6{
+            text-align: center;
+            font-weight: $font-b;
+            font-size: $font-s;
+        }
+        input{
+            width: 100%;
+        }
+        a{
+            color: $color-og3;
+            font-size: 14px;
+	        margin-bottom: 30px;
+        }
+        a:hover{
+            font-weight: $font-b;
+        }  
+    }
+    .btn-register,.btn-login{
+        background-color: $color-gr;
+        width: 49%;
+    }
+    .btn-register:hover,.btn-login:hover{
+        background-color: $color-og3;
+    }
+}

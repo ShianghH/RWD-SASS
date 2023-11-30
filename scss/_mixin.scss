@@ -1,0 +1,10 @@
+@mixin logo-text{
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+};
+@mixin bg-center{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+};

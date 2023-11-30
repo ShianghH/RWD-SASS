@@ -1,0 +1,176 @@
+h2{
+    background-image: url(..//img/logo_l@svg.svg);
+    background-repeat: no-repeat;
+    @include logo-text;
+    width: 245px;
+    height: 49px;
+    margin-bottom: 44px;
+}
+h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 31px;	
+    font-weight: bold;
+}
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;     
+}
+/* header  */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	z-index: 999;	
+	width: 100%;
+	max-width: 1024px;
+	padding: 20px 30px;
+    h1{
+        a{
+            background-image: url(..//img/logo_w@svg.svg);
+            background-repeat: no-repeat;
+            @include logo-text;
+            width: 120px;
+            height: 24px;
+            margin-left: 10px;
+        }
+    }
+    .menu{
+        display: flex;
+        /*隱藏選單*/
+        @include iphone(){
+            max-height: 0px;
+            overflow: hidden;
+            position: absolute;
+            top: 64px; /* top64為hreader高度 */
+            background: rgba(0, 0, 0, 0.6);
+            flex-direction: column;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            transition: 1s;
+        }
+        a{
+            padding: 0 30px;
+            @include iphone(){
+                padding: 20px;
+            }
+        }
+        a:hover{
+            background: $color-gr;
+        }
+    }
+    .mobile-link{
+        display: none;
+        @include iphone(){
+            display: block;
+        }
+    }
+}
+/*點擊顯示選單*/
+.show .menu{
+    @include iphone(){
+        max-height: 182px;
+    }
+}
+/* banner背景以及文字 */
+.banner{
+    background-image: url(..//img/header_desktop.png);
+    @include bg-center;
+    height: 420px;
+    color: $corlo-wt;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include iphone(){
+        background-image: url(..//img/header_mobile.png);
+    }
+    .banner-text{
+        color: $corlo-wt;
+        background: rgba(0, 0, 0, 0.6);
+	    padding: 20px;
+        h3{
+            font-size: $font-l;
+            margin: 20px 0 16px;
+        }
+    }
+}
+/*featureur介紹,feedback容器 */
+.feature-introduce,.container,.container li{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*contact */
+.information{
+    display: flex;
+}
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    @include pad(){
+        position: relative;
+    }
+    @include iphone(){
+        flex-direction: column;
+    }
+    .about{
+        display: flex;
+        @include pad(){
+            flex-wrap: wrap;
+        }
+        >li{
+            width: 50%;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            @include iphone(){
+                width: 100%;
+            }
+        }
+        h5{
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    }
+    .footer-cotact a{
+        color: $color-br;
+    }
+    .footer-cotact a:hover{
+        color: $color-og;
+
+    }
+    h2{
+        @include iphone(){
+            margin: 0 auto;
+        }
+    }
+    .logo{
+        display: flex;
+        justify-content: flex-end;
+        @include iphone(){
+            justify-content: center;
+            margin-top: 30px;
+        }
+        i{
+            margin-left: 12px;
+        }
+    }
+    .link{
+        @include pad(){
+            position: absolute;
+            right: 40;
+            bottom: 90;
+        }
+        @include iphone(){
+            position: static;
+        }
+    }
+}
+
+
+
+
