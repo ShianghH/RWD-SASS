@@ -513,11 +513,11 @@ h4 {
 .login .login-form a:hover {
   font-weight: bold;
 }
-.login .btn-register, .login .btn-login {
+.login .login-btn{
   background-color: #929292;
   width: 49%;
 }
-.login .btn-register:hover, .login .btn-login:hover {
+.login .login-btn:hover{
   background-color: #F56C23;
 }
 
